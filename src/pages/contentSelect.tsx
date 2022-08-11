@@ -42,6 +42,7 @@ function ContentSelect() {
               exercise={exercises[bestExercise]?.exercise}
               msg={exercises[bestExercise]?.msg}
               best={false}
+              key={0}
             ></CardSelection>
           </Center>
         ) : (
@@ -50,8 +51,8 @@ function ContentSelect() {
               <CardSelection
                 exercise={exercise}
                 msg={msg}
-                // @ts-ignore
                 best={index == bestExercise}
+                key={index}
               ></CardSelection>
             ))}
           </>
