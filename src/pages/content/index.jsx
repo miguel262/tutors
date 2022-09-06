@@ -1,7 +1,7 @@
 import Router from "next/router";
 import { useEffect } from "react";
 
-export default function index() {
+export default function Index() {
   useEffect(() => {
     Router.replace("exercise/solve");
   }, []);
