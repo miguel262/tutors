@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { CardSelection } from "../components/contentSelectComponents/CardSelection";
 import { SimpleGrid, Center } from "@chakra-ui/react";
-import { useGQLQuery } from "rq-gql";
-import { gql } from "../graphql";
+//import { useGQLQuery } from "rq-gql";
+//import { gql } from "../graphql";
 
 function ContentSelect() {
   const router = useRouter();

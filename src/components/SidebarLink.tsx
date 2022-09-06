@@ -30,7 +30,7 @@ export const SidebarLink = (props: SidebarLinkProps) => {
     target,
     ...rest
   } = props;
-  const { push, prefetch, pathname, asPath, query } = useRouter();
+  const { push, prefetch, pathname, query } = useRouter();
 
   const activeBg = useColorModeValue("blue.900", "gray.700");
   const hoverBg = useColorModeValue("blue.700", "gray.600");
