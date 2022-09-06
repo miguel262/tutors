@@ -18,18 +18,14 @@ export function Navigation() {
       <Stack pb="6">
         {user && (
           <>
-            <SidebarLink href={"contentSelect?type=factorizacion"}>
+            <SidebarLink href={"contentSelect?type=4"}>
               Factorización
             </SidebarLink>
-            <SidebarLink href={"contentSelect?type=ecuaciones"}>
-              Ecuaciones
-            </SidebarLink>
-            <SidebarLink href={"contentSelect?type=fracciones"}>
-              Fracciones
-            </SidebarLink>
-            <SidebarLink href={"contentSelect?type=geometria"}>
-              Geometría
-            </SidebarLink>
+            <SidebarLink href={"contentSelect?type=5"}>Ecuaciones</SidebarLink>
+            <SidebarLink href={"contentSelect?type=6"}>Fracciones</SidebarLink>
+            <SidebarLink href={"contentSelect?type=7"}>Geometría</SidebarLink>
+            <SidebarLink href={"valtioExample"}>ejemplo valtio</SidebarLink>
+            <SidebarLink href={"storageExample"}>ejemplo storage</SidebarLink>
           </>
         )}
       </Stack>

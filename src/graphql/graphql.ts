@@ -1819,7 +1819,7 @@ export const CurrentUserDocument = {
                 name: { kind: "Name", value: "code" },
                 value: {
                   kind: "StringValue",
-                  value: "factorize_tutor",
+                  value: "NivPreAlg",
                   block: false,
                 },
               },

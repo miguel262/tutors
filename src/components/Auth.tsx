@@ -7,6 +7,7 @@ import { proxy, useSnapshot } from "valtio";
 import { CurrentUserQuery, gql } from "../graphql";
 import { rqGQLClient } from "../rqClient";
 import { useAction } from "../utils/action";
+import { sessionStateInitial } from "./SessionState";
 
 export const AuthState = proxy<{
   auth0User: Auth0User | null;
@@ -51,7 +52,7 @@ export function SyncAuth() {
             tags
           }
         }
-        project(code: "factorize_tutor") {
+        project(code: "NivPreAlg") {
           id
           code
           label
@@ -105,7 +106,11 @@ const OnStart = memo(function OnStart() {
   const projectId = project?.id;
 
   useEffect(() => {
-    if (projectId) startAction();
+    if (projectId) {
+      //lógica al iniciar sesión, lógica de sessionState
+      sessionStateInitial(AuthState.user, AuthState.auth0User);
+      startAction();
+    }
   }, [projectId, startAction]);
 
   return null;

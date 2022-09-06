@@ -30,11 +30,12 @@ export const SidebarLink = (props: SidebarLinkProps) => {
     target,
     ...rest
   } = props;
-  const { push, prefetch, pathname, asPath } = useRouter();
+  const { push, prefetch, pathname, asPath, query } = useRouter();
 
   const activeBg = useColorModeValue("blue.900", "gray.700");
   const hoverBg = useColorModeValue("blue.700", "gray.600");
-
+  //const query2 = href;
+  //console.log(href.indexOf("="));
   return (
     <LinkBox
       marginEnd="2"
@@ -44,7 +45,11 @@ export const SidebarLink = (props: SidebarLinkProps) => {
       py="1"
       rounded="md"
       cursor="pointer"
-      bg={asPath === "/" + href ? activeBg : undefined}
+      bg={
+        query.type === href.substring(href.indexOf("=") + 1)
+          ? activeBg
+          : undefined
+      }
       _hover={{ color: "white", bg: hoverBg }}
       className="group"
       fontWeight="medium"

@@ -1,25 +1,70 @@
 import { useRouter } from "next/router";
 import { CardSelection } from "../components/contentSelectComponents/CardSelection";
 import { SimpleGrid, Center } from "@chakra-ui/react";
+import { useGQLQuery } from "rq-gql";
+import { gql } from "../graphql";
 
 function ContentSelect() {
   const router = useRouter();
   const topic = router.query; //topico
   // *** Lógica por implementar para obtener 3 ejercicios grupo experimental o 1 ejercicio grupo control ***
 
+  //lógica para obtener los ejercicios
+  /*const { data, isLoading } =
+    topic.type == "4"
+      ? useGQLQuery(
+          gql(`
+            query ProjectData {
+              project(code: "NivPreAlg") {
+                content(
+                  pagination: { first: 25 }
+                  filters: { topics: [3, 5, 6, 7, 8] }
+                ) {
+                  nodes {
+                    json
+                  }
+                }
+              }
+            }
+          `)
+        )
+      : useGQLQuery(
+          gql(`
+            query ProjectData {
+              project(code: "NivPreAlg") {
+                content(pagination: { first: 25 }, filters: { topics: [4] }) {
+                  nodes {
+                    json
+                  }
+                }
+              }
+            }
+          `)
+        );
+
+  const listEjercicio = data?.project?.content?.nodes.map(
+    (data: { json: any }) => {
+      return data.json;
+    }
+  );
+
+  console.log(listEjercicio);*/
+
   // *** data manual ***
   const control = false; //false = 3 exersices, true = 1 exercise
-  const exercises = [
+
+  const exercises2 = [
+    ///////////// json, sub-topic, msg ///////////////////////////
     {
-      exercise: "Ejercicio 1",
+      exercise: "ej 1", //listEjercicio[0].itemTitle,
       msg: "explicación (prerequisitos - más fácil)",
     },
     {
-      exercise: "Ejercicio 2",
+      exercise: "ej 2", //listEjercicio[4].itemTitle,
       msg: "explicación (similar - seguir practicando)",
     },
     {
-      exercise: "Ejercicio 3",
+      exercise: "ej 3", //listEjercicio[6].itemTitle,
       msg: "explicación (más difícil - aprender más)",
     },
   ]; //id ejercicio
@@ -36,18 +81,18 @@ function ContentSelect() {
         textAlign="center"
         rounded="lg"
       >
-        {control ? (
+        {control /*&& !isLoading*/ ? (
           <Center>
             <CardSelection
-              exercise={exercises[bestExercise]?.exercise}
-              msg={exercises[bestExercise]?.msg}
+              exercise={exercises2[bestExercise]?.exercise}
+              msg={exercises2[bestExercise]?.msg}
               best={false}
               key={0}
             ></CardSelection>
           </Center>
         ) : (
           <>
-            {exercises.map(({ exercise, msg }, index) => (
+            {exercises2.map(({ exercise, msg }, index) => (
               <CardSelection
                 exercise={exercise}
                 msg={msg}
