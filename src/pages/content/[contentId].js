@@ -4,9 +4,8 @@ import { withAuth } from "../../components/Auth";
 import { useRouter } from "next/router";
 import { Button } from "@chakra-ui/react";
 import { Children } from "react";
-export default withAuth(function exercise({ children }) {
+export default withAuth(function content() {
   const router = useRouter();
-  console.log(children);
   // const idExercise = router.basePath;
 
   return (
