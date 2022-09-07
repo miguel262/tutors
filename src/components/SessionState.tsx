@@ -1,5 +1,5 @@
 import localforage from "localforage";
-import { proxy, useSnapshot } from "valtio";
+import { proxy } from "valtio";
 import type { AuthState } from "./Auth";
 import type { User } from "@auth0/auth0-react";
 import type { UserRole } from "../graphql";
@@ -97,4 +97,4 @@ export const sessionStateInitial = (
   }
 };
 
-export const useSessionState = () => useSnapshot(sessionState);
+//export const useSessionState = () => useSnapshot(sessionState);
