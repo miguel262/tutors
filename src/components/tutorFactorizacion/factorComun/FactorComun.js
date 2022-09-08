@@ -24,7 +24,7 @@ import { SelectStep } from "../tools/SelectStep";
 import { useAction } from "../../../utils/action";
 import { LoadContentAction } from "../tools/LoadContentAction";
 
-const FC = ({ exercise, nextRouter }) => {
+export const FC = ({ exercise, nextRouter }) => {
   LoadContentAction(exercise); // report action loadContent
   const action = useAction(); //send action to central system
   const [step1Valid, setStep1Valid] = useState(null); //change the value "null" when step 1 is completed
@@ -136,4 +136,4 @@ const FC = ({ exercise, nextRouter }) => {
   );
 };
 
-export default FC;
+//export default FC;

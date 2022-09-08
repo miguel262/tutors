@@ -25,7 +25,7 @@ import { VideoScreen } from "../tools/VideoScreen";
 import { useAction } from "../../../utils/action";
 import { LoadContentAction } from "../tools/LoadContentAction";
 
-const FCC = ({ exercise }) => {
+export const FCC = ({ exercise }) => {
   LoadContentAction(exercise); // report action loadContent
   //info usuario, ---
   const [step1Valid, setStep1Valid] = useState(null); //change the value "null" when step 1 is completed
@@ -282,4 +282,4 @@ const FCC = ({ exercise }) => {
   );
 };
 
-export default FCC;
+//export default FCC;

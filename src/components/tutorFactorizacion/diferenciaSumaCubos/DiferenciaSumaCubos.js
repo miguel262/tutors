@@ -27,7 +27,7 @@ import { useAction } from "../../../utils/action";
 import { LoadContentAction } from "../tools/LoadContentAction";
 
 //react functional component
-const DSC = ({ exercise, nextRouter }) => {
+export const DSC = ({ exercise, nextRouter }) => {
   LoadContentAction(exercise); // report action loadContent
   const [step1Valid, setStep1Valid] = useState(null); //change the value "null" when step 1 is completed
   const [step2Valid, setStep2Valid] = useState(null); //change the value "null" when step 2 is completed
@@ -219,4 +219,4 @@ const DSC = ({ exercise, nextRouter }) => {
   );
 };
 
-export default DSC;
+//export default DSC;

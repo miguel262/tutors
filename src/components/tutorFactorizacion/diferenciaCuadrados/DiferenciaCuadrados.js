@@ -27,7 +27,7 @@ import { SelectStep } from "../tools/SelectStep";
 import { useAction } from "../../../utils/action";
 import { LoadContentAction } from "../tools/LoadContentAction";
 
-const DC = ({ exercise }) => {
+export const DC = ({ exercise }) => {
   LoadContentAction(exercise); // report action loadContent
   const [step1Valid, setStep1Valid] = useState(null); //change the value "null" when step 1 is completed
   const [step2Valid, setStep2Valid] = useState(null); //change the value "null" when step 2 is completed
@@ -214,4 +214,4 @@ const DC = ({ exercise }) => {
   );
 };
 
-export default DC;
+//export default DC;
