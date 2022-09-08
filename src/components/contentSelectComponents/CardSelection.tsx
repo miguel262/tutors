@@ -28,10 +28,10 @@ export const CardSelection = ({
 
   subscribe(sessionState.currentContent, () => {
     /*update currentContent*/
-    sessionStateBD.getItem("currentContent").then(function (item) {
-      item = JSON.parse(JSON.stringify(sessionState.currentContent));
-      sessionStateBD.setItem("currentContent", item);
-    });
+    sessionStateBD.setItem(
+      "currentContent",
+      JSON.parse(JSON.stringify(sessionState.currentContent))
+    );
   });
 
   return (
