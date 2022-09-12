@@ -1,12 +1,12 @@
 import { Stack /*, Text */ } from "@chakra-ui/react";
 import { FaHome } from "react-icons/fa";
-import { useAuth } from "./Auth";
+//import { useAuth } from "./Auth";
 import { DarkModeToggle } from "./DarkModeToggle";
 import { ScrollArea } from "./ScrollArea";
 import { SidebarLink } from "./SidebarLink";
 
 export function Navigation() {
-  const { user } = useAuth();
+  //const { user } = useAuth();
   return (
     <ScrollArea pt="5" pb="6">
       <Stack pb="6">
