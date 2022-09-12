@@ -7,7 +7,7 @@ import { proxy, useSnapshot } from "valtio";
 import { CurrentUserQuery, gql } from "../graphql";
 import { rqGQLClient } from "../rqClient";
 import { useAction } from "../utils/action";
-import { sessionStateInitial } from "./SessionState";
+//import { sessionStateInitial } from "./SessionState";
 
 export const AuthState = proxy<{
   auth0User: Auth0User | null;
@@ -108,7 +108,7 @@ const OnStart = memo(function OnStart() {
   useEffect(() => {
     if (projectId) {
       //lógica al iniciar sesión, lógica de sessionState
-      sessionStateInitial(AuthState.user, AuthState.auth0User);
+      //sessionStateInitial(AuthState.user, AuthState.auth0User);
       startAction();
     }
   }, [projectId, startAction]);

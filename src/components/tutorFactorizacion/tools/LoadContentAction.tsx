@@ -13,6 +13,5 @@ export const LoadContentAction = (exercise: {
       topicID: exercise?.contentType,
     });
   }, []);
-
   return null;
 };

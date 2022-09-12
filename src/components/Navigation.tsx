@@ -15,7 +15,7 @@ export function Navigation() {
         </SidebarLink>
       </Stack>
 
-      <Stack pb="6">
+      {/*<Stack pb="6">
         {user && (
           <>
             <Text fontWeight="medium">Rudimentos Algebraicos</Text>
@@ -53,7 +53,7 @@ export function Navigation() {
             </SidebarLink>
           </>
         )}
-      </Stack>
+        </Stack>*/}
 
       <Stack alignItems="center">
         <DarkModeToggle />
