@@ -142,6 +142,7 @@ export const DCstep1 = ({
               <Hint
                 hints={step1.hints}
                 contentId={contentID}
+                topicId={topicID}
                 stepId={step1.stepId}
                 matchingError={step1.matchingError}
                 response={[response1, response2]}

@@ -138,6 +138,7 @@ const FCstep1 = ({ step1, setStep1Valid, step1Valid, contentID, topicID }) => {
                 hints={step1.hints}
                 contentId={contentID}
                 stepId={step1.stepId}
+                topicId={topicID}
                 matchingError={step1.matchingError}
                 response={[response]}
                 error={error}

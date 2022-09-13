@@ -151,8 +151,8 @@ export const DSCstep2 = ({
               &nbsp;&nbsp;
               <Hint
                 hints={step2.hints}
-                //stepId={ejercicio.stepId}
                 contentId={contentID}
+                topicId={topicID}
                 stepId={step2.stepId}
                 matchingError={step2.matchingError}
                 response={[response1, response2]}

@@ -16,6 +16,7 @@ const Hint = ({
   hints, //all hints
   stepId, //id for send data
   contentId, //contentId for send data
+  topicId,
   matchingError, //list of list
   response, //list of response
   error,
@@ -118,6 +119,7 @@ const Hint = ({
         verbName: "requestHint",
         stepID: "" + stepId,
         contentID: contentId,
+        topicID: topicId,
         hintID: "" + list[j].hintId,
         extra: {
           source: "next",
@@ -133,6 +135,7 @@ const Hint = ({
         verbName: "requestHint",
         stepID: "" + stepId,
         contentID: contentId,
+        topicID: topicId,
         hintID: "" + list[j].hintId,
         extra: {
           source: "prev",
@@ -158,6 +161,7 @@ const Hint = ({
                 verbName: "requestHint",
                 stepID: "" + stepId,
                 contentID: contentId,
+                topicID: topicId,
                 hintID: "" + list[j].hintId,
                 extra: {
                   source: "Open",

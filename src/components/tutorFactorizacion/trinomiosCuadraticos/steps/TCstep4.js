@@ -140,6 +140,7 @@ export const TCstep4 = ({
               <Hint
                 hints={step4.hints}
                 contentId={contentID}
+                topicId={topicID}
                 stepId={step4.stepId}
                 matchingError={step4.matchingError}
                 response={[response1, response2]}

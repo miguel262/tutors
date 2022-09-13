@@ -155,8 +155,8 @@ export const TCstep1 = ({
               &nbsp;&nbsp;
               <Hint
                 hints={step1.hints}
-                //stepId={ejercicio.stepId}
                 contentId={contentID}
+                topicId={topicID}
                 stepId={step1.stepId}
                 matchingError={step1.matchingError}
                 response={[response1, response2, response3]}
