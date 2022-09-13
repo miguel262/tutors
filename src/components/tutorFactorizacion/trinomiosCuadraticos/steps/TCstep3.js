@@ -97,6 +97,7 @@ export const TCstep3 = ({
                 hints={step3.hints}
                 //stepId={ejercicio.stepId}
                 contentId={contentID}
+                topicId={topicID}
                 stepId={step3.stepId}
                 matchingError={step3.matchingError}
                 response={hintUnique}

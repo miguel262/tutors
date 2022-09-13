@@ -140,8 +140,8 @@ const FCCstep2 = ({ step2, setStep2Valid, step2Valid, contentID, topicID }) => {
               &nbsp; &nbsp;
               <Hint
                 hints={step2.hints}
-                //stepId={ejercicio.stepId}
                 contentId={contentID}
+                topicId={topicID}
                 stepId={step2.stepId}
                 matchingError={step2.matchingError}
                 response={[response1, response2]}

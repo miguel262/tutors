@@ -172,6 +172,7 @@ export const TCstep5 = ({
                 hints={step5.hints}
                 //stepId={ejercicio.stepId}
                 contentId={contentID}
+                topicId={topicID}
                 stepId={step5.stepId}
                 matchingError={step5.matchingError}
                 response={[response1, response2, response3]}
