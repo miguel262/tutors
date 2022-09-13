@@ -8,6 +8,7 @@ export const sessionState = proxy<{
   currentUser: typeof AuthState.user | null;
   tag: string[];
   domain: string;
+  topic: string;
   sessionId: string;
   learnerModel: Object;
   currentContent: {
@@ -24,6 +25,7 @@ export const sessionState = proxy<{
   currentUser: null,
   tag: [],
   domain: "PreAlgebra",
+  topic: "",
   sessionId: "",
   learnerModel: {
     type: "BKT",
