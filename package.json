@@ -21,6 +21,7 @@
     "@graphql-codegen/core": "^2.4.0",
     "@graphql-typed-document-node/core": "^3.1.1",
     "@matejmazur/react-katex": "^3.1.3",
+    "@types/react-star-rating-component": "^1.4.1",
     "better-react-mathjax": "^2.0.1",
     "framer-motion": "^6.2.1",
     "graphql": "^16.2.0",
@@ -36,8 +37,10 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-joyride": "2.3.1",
+    "react-mathquill": "1.0.2",
     "react-notification-badge": "1.5.0",
     "react-query": "^3.34.12",
+    "react-star-rating-component": "^1.4.1",
     "rq-gql": "^0.4.3",
     "serialize-error": "^9.0.0",
     "valtio": "1.2.9"

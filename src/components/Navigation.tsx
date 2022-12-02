@@ -27,6 +27,7 @@ export function Navigation() {
             </SidebarLink>
 
             <Text fontWeight="medium">Potencias</Text>
+
             <SidebarLink href={"contentSelect?type=6"}>
               Potencias racionales
             </SidebarLink>

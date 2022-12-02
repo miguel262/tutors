@@ -1,13 +1,14 @@
 import { withAuth } from "../../components/Auth";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-import { Button } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 import { sessionState } from "../../components/SessionState";
 import data1 from "../../components/tutorFactorizacion/factorComun/ejercicioFC.json";
 import data2 from "../../components/tutorFactorizacion/factorComunCompuesto/ejerciciosFCC.json";
 import data3 from "../../components/tutorFactorizacion/diferenciaCuadrados/ejerciciosDC.json";
 import data4 from "../../components/tutorFactorizacion/diferenciaSumaCubos/ejerciciosDSC.json";
 import data5 from "../../components/tutorFactorizacion/trinomiosCuadraticos/ejerciciosTC.json";
+import data6 from "../../components/lvltutor/tutor/fracciones/fracciones1.json";
 
 export default withAuth(function Content() {
   const router = useRouter();
@@ -20,14 +21,19 @@ export default withAuth(function Content() {
       (mod) => mod.TutorFac
     )
   );
+  const DynamicPlain = dynamic(() =>
+    import("../../components/lvlTutor/Plain").then((mod) => mod.Plain)
+  );
 
   return (
     <>
       <div>
         {router.query.type == 4 ? (
+          /*"Factorización"*/
           <DynamicTutorFac exercise={data5[0]} nextRouter="/" />
         ) : router.query.type == 5 ? (
-          "Fracción algebraica"
+          /*"Fracción algebraica"*/
+          <DynamicPlain steps={data6[0]} />
         ) : router.query.type == 6 ? (
           "Potencias racionales"
         ) : router.query.type == 7 ? (

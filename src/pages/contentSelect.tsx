@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { CardSelection } from "../components/contentSelectComponents/CardSelection";
 import { SimpleGrid, Center } from "@chakra-ui/react";
+import QuestionReflection from "../components/contentSelectComponents/QuestionReflection";
+import { useState } from "react";
 //import { useGQLQuery } from "rq-gql";
 //import { gql } from "../graphql";
 
@@ -69,7 +71,7 @@ function ContentSelect() {
     },
   ]; //id ejercicio
   const bestExercise = 1;
-
+  const [question, setQuestion] = useState(false);
   //console.log(query.type);
   return (
     <>
@@ -81,7 +83,9 @@ function ContentSelect() {
         textAlign="center"
         rounded="lg"
       >
-        {control /*&& !isLoading*/ ? (
+        {question ? (
+          <QuestionReflection setQuestion={setQuestion} />
+        ) : control /*&& !isLoading*/ ? (
           <Center>
             <CardSelection
               exercise={exercises2[bestExercise]?.exercise}
