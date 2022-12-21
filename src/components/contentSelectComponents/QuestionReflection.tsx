@@ -1,5 +1,5 @@
-import { Button, HStack } from "@chakra-ui/react";
-import { AiOutlineStar } from "react-icons/ai";
+import { Button } from "@chakra-ui/react";
+//import { AiOutlineStar } from "react-icons/ai";
 import StarRatingComponent from "react-star-rating-component";
 
 interface ChildProps {

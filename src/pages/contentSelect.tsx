@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { CardSelection } from "../components/contentSelectComponents/CardSelection";
-import { SimpleGrid, Center } from "@chakra-ui/react";
+import { SimpleGrid, Center, Text } from "@chakra-ui/react";
 import QuestionReflection from "../components/contentSelectComponents/QuestionReflection";
 import { useState } from "react";
 //import { useGQLQuery } from "rq-gql";
@@ -53,21 +53,21 @@ function ContentSelect() {
   console.log(listEjercicio);*/
 
   // *** data manual ***
-  const control = false; //false = 3 exersices, true = 1 exercise
+  const control = true; //false = 3 exersices, true = 1 exercise
 
   const exercises2 = [
     ///////////// json, sub-topic, msg ///////////////////////////
     {
-      exercise: "ej 1", //listEjercicio[0].itemTitle,
-      msg: "explicación (prerequisitos - más fácil)",
+      exercise: "Opción 1", //listEjercicio[0].itemTitle,
+      msg: "MÁS FÁCIL - Para adquidir conocimientos pre-requisito o practicar con menos complejidad",
     },
     {
-      exercise: "ej 2", //listEjercicio[4].itemTitle,
-      msg: "explicación (similar - seguir practicando)",
+      exercise: "Opción 2", //listEjercicio[4].itemTitle,
+      msg: "SIMILAR -   \n Para adquirir fluidez en las habilidades que estás aprendiendo",
     },
     {
-      exercise: "ej 3", //listEjercicio[6].itemTitle,
-      msg: "explicación (más difícil - aprender más)",
+      exercise: "Opción 3", //listEjercicio[6].itemTitle,
+      msg: "MÁS DIFÍCIL - Para nuevos aprendizajes o combinar conocimientos",
     },
   ]; //id ejercicio
   const bestExercise = 1;
@@ -75,7 +75,11 @@ function ContentSelect() {
   //console.log(query.type);
   return (
     <>
-      <p>Selección del contenido del tópico: {topic.type}</p>
+      <Text>
+        El sistema ha seleccionado el ejercicio más adecuado en base a tu nivel
+        de conocimiento en el capítulo.
+        {/*Selección del contenido del tópico: {topic.type}*/}
+      </Text>
       <SimpleGrid
         columns={control ? 1 : 3}
         spacing="8"

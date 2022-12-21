@@ -18,7 +18,16 @@ export function Navigation() {
       <Stack pb="6">
         {user && (
           <>
-            <Text fontWeight="medium">Rudimentos Algebraicos</Text>
+            <Text fontWeight="medium">Capítulos</Text>
+            <SidebarLink href={"contentSelect?type=4"}>
+              Factorización
+            </SidebarLink>
+            <SidebarLink href={"contentSelect?type=5"}>Ecuaciones</SidebarLink>
+            <SidebarLink href={"contentSelect?type=6"}>
+              Raíces y Potencias
+            </SidebarLink>
+            <SidebarLink href={"contentSelect?type=7"}>Geometría</SidebarLink>
+            {/*<Text fontWeight="medium">Rudimentos Algebraicos</Text>
             <SidebarLink href={"contentSelect?type=4"}>
               Factorización
             </SidebarLink>
@@ -51,7 +60,7 @@ export function Navigation() {
             </SidebarLink>
             <SidebarLink href={"contentSelect?type=13"}>
               Teorema de Pitágoras
-            </SidebarLink>
+        </SidebarLink>*/}
           </>
         )}
       </Stack>
